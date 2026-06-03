@@ -1,0 +1,383 @@
+/* ===== 全体のスタイルを設定 ===== */
+/* ページ全体のスタイル設定 */
+body {
+    /* 使用するフォントを指定 */
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 背景色を薄いグレーに設定 */
+    background-color: #f5f7fa;
+    /* テキストの色をダークグレーに設定 */
+    color: #34495e;
+    /* 行間を1.6に設定して、読みやすくする */
+    line-height: 1.6;
+    /* ページの外側の余白をゼロに設定 */
+    margin: 0;
+    /* ページの内側の余白をゼロに設定 */
+    padding: 0;
+}
+
+/* ===== コンテナのスタイル ===== */
+/* 中央揃えのコンテナボックスの設定 */
+.container {
+    /* コンテナの最大幅を800pxに制限 */
+    max-width: 800px;
+    /* 上下の余白を40pxに設定して中央揃え */
+    margin: 40px auto 0;
+    /* コンテナの内側の余白を設定 */
+    padding: 40px 20px;
+    /* 背景色を白に設定 */
+    background-color: #ffffff;
+    /* コンテナに影をつけて浮き上がって見せる */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* コンテナの角を丸くする */
+    border-radius: 8px;
+}
+
+/* ===== 見出しのスタイル ===== */
+/* ページの見出し（タイトル）のスタイル */
+h1 {
+    /* 見出しの色を青に設定 */
+    color: #3498db;
+    /* テキストを中央揃え */
+    text-align: center;
+    /* フォントサイズを大きく設定 */
+    font-size: 2.5em;
+    /* 下の余白を30pxに設定 */
+    margin-bottom: 30px;
+    /* フォントの太さを少し軽めに設定 */
+    font-weight: 300;
+    /* 文字の間隔を少し広げる */
+    letter-spacing: 1px;
+}
+
+/* ===== ToDo項目のステータスのスタイル ===== */
+/* ToDo項目のステータスラベル（完了/未完了）用のスタイル */
+.todo-status {
+    /* 文字を太くして強調 */
+    font-weight: 500;
+    /* ステータスラベルの内側の余白を設定 */
+    padding: 5px 10px;
+    /* 角を丸くする */
+    border-radius: 20px;
+    /* フォントサイズを少し小さめに設定 */
+    font-size: 0.8em;
+    /* 文字をすべて大文字に変換 */
+    text-transform: uppercase;
+    /* 文字間のスペースを少し広げる */
+    letter-spacing: 0.5px;
+    /* ラベルをインラインブロックにして他の要素と一緒に配置 */
+    display: inline-block;
+    /* 上の余白を10pxに設定 */
+    margin-top: 10px;
+}
+
+/* 完了と未完了のステータスの色 */
+/* 完了ステータスの背景色とテキスト色 */
+.todo-status.completed {
+    /* 背景色を緑に設定 */
+    background-color: #2ecc71;
+    /* テキストの色を白に設定 */
+    color: white;
+}
+
+/* 未完了ステータスの背景色とテキスト色 */
+.todo-status.not-completed {
+    /* 背景色をオレンジに設定 */
+    background-color: #f39c12;
+    /* テキストの色を白に設定 */
+    color: white;
+}
+
+/* ===== ToDo項目の作成・更新日のスタイル ===== */
+/* ToDo項目の作成日や更新日用のスタイル */
+.todo-date {
+    /* フォントサイズを小さめに設定 */
+    font-size: 0.8em;
+    /* テキストの色をグレーに設定 */
+    color: #7f8c8d;
+    /* 上の余白を10pxに設定 */
+    margin-top: 10px;
+    /* 文字を斜めにしてデザインを少し変える */
+    font-style: italic;
+}
+
+/* ===== ボタンのスタイル ===== */
+/* 全般的なボタンの基本スタイル */
+.btn {
+    /* インラインブロックで配置 */
+    display: inline-block;
+    /* 内側の余白を設定 */
+    padding: 10px 20px;
+    /* ボタンのフォントサイズを設定 */
+    font-size: 14px;
+    /* フォントを少し太くして強調 */
+    font-weight: 500;
+    /* テキストを中央に配置 */
+    text-align: center;
+    /* 縦方向に要素を中央揃え */
+    vertical-align: middle;
+    /* マウスカーソルをポインタに変更 */
+    cursor: pointer;
+    /* ボーダーを無効化 */
+    border: none;
+    /* 角を丸くする */
+    border-radius: 4px;
+    /* 下線を無効化 */
+    text-decoration: none;
+    /* ホバー時のアニメーション効果を追加 */
+    transition: all 0.3s ease;
+    /* 文字をすべて大文字に変換 */
+    text-transform: uppercase;
+    /* 文字間のスペースを広げる */
+    letter-spacing: 0.5px;
+    /* テキストの色を白に設定 */
+    color: #fff;
+}
+
+/* ボタンの色のバリエーション */
+/* プライマリボタン（青） */
+.btn-primary { background-color: #3498db; }
+
+/* 情報ボタン（青） */
+.btn-info { background-color: #3498db; }
+
+/* 警告ボタン（オレンジ） */
+.btn-warning { background-color: #f39c12; }
+
+/* 危険ボタン（赤） */
+.btn-danger { background-color: #e74c3c; }
+
+/* セカンダリボタン（グレー） */
+.btn-secondary { background-color: #95a5a6; }
+
+/* ボタンにホバーした時のスタイル */
+/* ホバー時にボタンを少し暗くし、影を追加 */
+.btn:hover {
+    /* 透明度を少し下げて濃く見せる */
+    opacity: 0.9;
+    /* ボタンを少し上に移動 */
+    transform: translateY(-2px);
+    /* 影を追加して浮き上がって見せる */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ToDo項目のアクションボタンのコンテナスタイル ===== */
+/* ToDo項目に付随するアクションボタン（詳細、更新、削除）の配置 */
+.todo-actions {
+    /* 上の余白を15pxに設定 */
+    margin-top: 15px;
+    /* ボタンを右揃えにするためにフレックスボックスを使用 */
+    display: flex;
+    /* 右揃え */
+    justify-content: flex-end;
+}
+
+/* アクションボタンの間に少し間隔を空ける */
+.todo-actions .btn {
+    /* 左に10pxの余白を追加 */
+    margin-left: 10px;
+}
+
+/* ===== メッセージ表示セクションのスタイル ===== */
+/* フィードバックメッセージ（成功やエラー）表示エリアのスタイル */
+.messages {
+    /* 画面右上に固定表示 */
+    position: fixed;
+    /* 画面上から20pxの位置 */
+    top: 20px;
+    /* 画面右から20pxの位置 */
+    right: 20px;
+    /* メッセージの最大幅を300pxに設定 */
+    max-width: 300px;
+    /* 他の要素の上に表示されるようにz-indexを設定 */
+    z-index: 1000;
+}
+
+/* メッセージ一つ一つのスタイル */
+.message {
+    /* メッセージ内側の余白を設定 */
+    padding: 15px 20px;
+    /* 角を丸くして柔らかい印象に */
+    border-radius: 8px;
+    /* 下に余白を設ける */
+    margin-bottom: 10px;
+    /* テキストの色を白に設定 */
+    color: white;
+    /* フォントを少し太くして強調 */
+    font-weight: 500;
+    /* 影をつけて立体感を追加 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    /* フレックスボックスで内容を左右に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* メッセージが表示されるときのアニメーション */
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from{
+        opacity:0;
+        transform:translateX(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+/* 成功メッセージの背景色 */
+.message.success { background-color: #4CAF50; }
+
+/* 成功メッセージにアイコンを追加 */
+.message.success::before {
+    /* 成功アイコンをFont Awesomeで表示 */
+    font-family: "Font Awesome 6 Free";
+    content: '\f05a';
+    font-weight: 900;
+    /* アイコンとテキストの間に余白を設定 */
+    margin-right: 10px;
+}
+
+/* メッセージの閉じるボタンのスタイル */
+.message .close-btn {
+    /* ポインタカーソルを表示 */
+    cursor: pointer;
+    /* 透明度を0.7に設定 */
+    opacity: 0.7;
+    /* ホバー時のアニメーションを設定 */
+    transition: opacity 0.3s;
+}
+
+/* 閉じるボタンにホバーした時のスタイル */
+.message .close-btn:hover { opacity: 1; }
+
+/* ===== ページネーションのスタイル ===== */
+.pagination {
+    /* ページネーション全体の中央揃え */
+    text-align: center;
+    /* ページネーション全体の上の余白を設定 */
+    margin-top: 20px;
+    /* 上下に少しスペースを追加してバランスをとる */
+    padding: 10px 0;
+}
+
+/* ページネーションリンクのスタイル */
+.pagination a {
+    /* リンクをボタン風に見せるための内側の余白 */
+    padding: 8px 12px;
+    /* リンクをインラインブロックにして中央揃え */
+    display: inline-block;
+    /* 背景色を青に設定 */
+    background-color: #3498db;
+    /* テキストの色を白に設定 */
+    color: #ffffff;
+    /* 角を丸くする */
+    border-radius: 4px;
+    /* テキストの下線を除去 */
+    text-decoration: none;
+    /* マウスホバー時にカーソルをポインタに変更 */
+    cursor: pointer;
+    /* リンク間に少し間隔を空ける */
+    margin: 0 5px;
+    /* ホバー時のアニメーション効果を追加 */
+    transition: all 0.3s ease;
+    /* 文字をすべて大文字に変換 */
+    text-transform: uppercase;
+    /* 文字間のスペースを少し広げる */
+    letter-spacing: 0.5px;
+}
+
+/* ページネーションリンクにホバーした時のスタイル */
+.pagination a:hover {
+    /* 透明度を少し下げて濃く見せる */
+    opacity: 0.9;
+    /* リンクを少し上に移動 */
+    transform: translateY(-2px);
+    /* 影を追加して浮き上がって見せる */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 現在のページ番号を強調表示 */
+.pagination .current-page {
+    /* テキストの色をダークグレーに設定 */
+    color: #34495e;
+    /* フォントを少し太くして強調 */
+    font-weight: bold;
+    /* 角を丸くしてボタン風に */
+    border-radius: 4px;
+    /* 背景色を薄いグレーに設定 */
+    background-color: #ecf0f1;
+    /* 内側の余白を追加 */
+    padding: 8px 12px;
+    /* リンク間に少し間隔を空ける */
+    margin: 0 5px;
+    /* リンクのボーダーを設定して少し際立たせる */
+    border: 1px solid #bdc3c7;
+    /* 文字をすべて大文字に変換 */
+    text-transform: uppercase;
+}
+
+/* ページネーションリンクが無効な場合 */
+.pagination .disabled {
+    /* テキストの色をライトグレーに設定 */
+    color: #bdc3c7;
+    /* クリックできないようにカーソルをデフォルトに設定 */
+    cursor: default;
+    /* 背景色を少し薄くして、非アクティブに見せる */
+    background-color: #e0e0e0;
+    /* ボーダーを追加 */
+    border: 1px solid #d3d3d3;
+}
+
+
+
+
+/* ===== 分析ページのスタイル ===== */
+
+/* 上部の概要セクションの余白調整 */
+.analytics-summary {
+    margin-bottom: 20px;
+}
+
+/* 統計ボックス全体のレイアウト（横並び、折り返し対応） */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 各統計ボックスのデザイン */
+.stat-box {
+    margin-top: 15px;                       /* 上の余白 */
+    background-color: #f9f9f9;            /* 背景色（淡いグレー） */
+    border-radius: 8px;                   /* 角丸 */
+    padding: 20px;                        /* 内側の余白 */
+    width: 22%;                           /* 横幅（画面の約1/4） */
+    text-align: center;                  /* 中央揃え */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影で浮かせる */
+}
+
+/* 統計数値のスタイル */
+.stat-value {
+    font-size: 24px;          /* 文字サイズ大きめ */
+    font-weight: bold;        /* 太字 */
+    margin-top: 10px;         /* 上の余白 */
+}
+
+/* グラフ表示エリアの全体スタイル */
+.analytics-charts {
+    background-color: white;               /* 背景色（白） */
+    border-radius: 8px;                    /* 角丸 */
+    padding: 20px;                         /* 内側の余白 */
+    margin-bottom: 30px;                   /* 下の余白 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影で浮かせる */
+}
+
+/* グラフ画像のスタイル（中央揃え＆最大横幅制限） */
+.analytics-charts img {
+    width: 100%;                 /* 横幅をコンテナいっぱいに */
+    height: auto;                /* 高さは自動調整（縦横比維持） */
+    max-width: 800px;            /* 最大横幅を800pxに制限 */
+    margin: 0 auto;              /* 中央揃え */
+    display: block;              /* ブロック要素化（中央揃えのため） */
+}

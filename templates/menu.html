@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー画面</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="menu-header">メニュー画面</h1>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="logout-button">ログアウト</button>
+        </form>
+        <div class="menu-container">
+            <a href="{% url 'hello' %}" class="menu-item">Helloアプリへ</a>
+            <a href="{% url 'book_list' %}" class="menu-item">書籍アプリへ</a>
+            <a href="{% url 'todo_list' %}" class="menu-item">ToDOアプリへ</a>
+            <a href="{% url 'orm_index' %}" class="menu-item">教育アプリへ</a>
+            <a href="{% url 'extends_index' %}" class="menu-item">Appendixへ</a>
+        </div>
+    </div>
+</body>
+</html>
+

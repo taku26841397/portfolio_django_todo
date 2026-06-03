@@ -156,9 +156,7 @@ LOGIN_REDIRECT_URL = 'todoapp/list'
 LOGOUT_REDIRECT_URL = '/'
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://todo-1lnw.onrender.com'
-]
+
 
 
 STATIC_URL = '/static/'
@@ -166,3 +164,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CSRF_TRUSTED_ORIGINS = [
+    'https://todo-1lnw.onrender.com'
+]

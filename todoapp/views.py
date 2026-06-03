@@ -68,7 +68,7 @@ class TodoCreateView(SuccessMessageMixin,LoginRequiredMixin,PermissionRequiredMi
     success_message = 'Todoが「登録」されました。'
     
     #作成権限追加
-    permission_required = 'todoapp.add_todo'
+    # permission_required = 'todoapp.add_todo'
 
 class TodoUpdateView(SuccessMessageMixin,LoginRequiredMixin,PermissionRequiredMixin,UpdateView):
 
@@ -84,7 +84,7 @@ class TodoUpdateView(SuccessMessageMixin,LoginRequiredMixin,PermissionRequiredMi
     #成功メッセージの追加
     success_message = 'Todoが「更新」されました。'
     
-    permission_required = 'todoapp.change_todo'
+    # permission_required = 'todoapp.change_todo'
     
     #フォームのバリデーション（入力チェック）が成功した後に呼ばれるメソッド
     def form_valid(self,form):
@@ -109,7 +109,7 @@ class TodoDeleteView(SuccessMessageMixin,LoginRequiredMixin,PermissionRequiredMi
     #成功メッセージの追加
     success_message = 'Todoが「削除」されました。'
     
-    permission_required = 'todoapp.delete_todo'
+    # permission_required = 'todoapp.delete_todo'
     
 class TodoAnalyticsView(LoginRequiredMixin,View):
     template_name = 'todoapp/todo_analytics.html'

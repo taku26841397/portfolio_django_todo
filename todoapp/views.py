@@ -9,8 +9,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 import io #画像を一時的にメモリに保存するために使用
 import base64 #画像データを文字列（テキスト）に変換するために使用
-# import matplotlib 
-# matplotlib.use('Agg')
+import matplotlib 
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt  #グラフ等がライブラリ
 from django.shortcuts import render
 from django.views import View

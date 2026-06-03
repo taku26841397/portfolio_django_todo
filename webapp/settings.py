@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xkgv*fdjd#ox1u1)+*0e@t(a!(3i4&)9@24lvv4n9w4&ex^1$e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'todo-1lnw.onrender.com',
@@ -57,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'webapp.urls'
@@ -153,3 +155,15 @@ LOGIN_REDIRECT_URL = 'todoapp/list'
 
 #ログアウト後のリダイレクト先
 LOGOUT_REDIRECT_URL = '/'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://todo-1lnw.onrender.com'
+]
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
